@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "github.com/nardiyansah/chat/chat";
+
+message Chat {
+  string message = 1;
+}
+
+service ChatService {
+  rpc SendChat (Chat) returns (Chat);
+}
